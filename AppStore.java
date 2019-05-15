@@ -3,7 +3,7 @@ import java.util.*;
 public class AppStore
 {
     private int dias;
-    
+    // adicionei este comentario para testar se ta funcionando no lado do client
     // ArrayList de utilizadores
     private static ArrayList<User> utilizadores = new ArrayList<User>();
 
