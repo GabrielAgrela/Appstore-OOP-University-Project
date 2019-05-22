@@ -1,12 +1,24 @@
 public class Classificacao
 {
-    int idCompra;
-    int idClassificacao;
-    int idApp;
-    int idUser;
-    int IdClassificacao;
-    String comentario;
 
+    private static int numClassificacoes;
+    private int idCompra;
+    private int idClassificacao;
+    private int idApp;
+    private int idUser;
+    private float classificacao;
+    private String comentario;
+
+    public Classificacao(int idCompra, int idApp,float classificacao,String comentario,int idUser) {
+        idClassificacao = numClassificacoes;
+        this.idCompra = idCompra;
+        this.idApp = idApp;
+        this.classificacao = classificacao;
+        this.comentario = comentario;
+        this.idUser = idUser;
+        numClassificacoes++;
+    }
+    
     private void alteraClassificacaoApp(int idClassificacao) {
         return ;
     }
@@ -53,5 +65,21 @@ public class Classificacao
 
     public void setIdUser(int idUser) {
         this.idUser = idUser;
+    }
+
+    public float getClassificacao() {
+        return classificacao;
+    }
+
+    public void setClassificacao(int classificacao) {
+        this.classificacao = classificacao;
+    }
+
+    public static int getNumClassificacoes() {
+        return numClassificacoes;
+    }
+
+    public static void setNumClassificacoes(int aNumClassificacoes) {
+        numClassificacoes = aNumClassificacoes;
     }
 }

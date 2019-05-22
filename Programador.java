@@ -1,11 +1,11 @@
 public class Programador extends User
 {
-    double mediaAvaliacoes, dinheiroRecebido;
+    private double mediaAvaliacoes, dinheiroRecebido;
     
-    public Programador(String nome, int idade, boolean isPremium, boolean isProgrammer){
-        super(nome, idade, isPremium, isProgrammer);
+    public Programador(String nome, int idade, boolean isPremium, boolean isProgrammer, double total){
+        super(nome, idade, isPremium, isProgrammer,total);
         mediaAvaliacoes = 0;
-        dinheiroRecebido = 0;
+        dinheiroRecebido = total;
     }
     
     public double getMediaAvaliacoes()
@@ -16,6 +16,11 @@ public class Programador extends User
     public void setMediaAvaliacoes(double mediaAvaliacoes)
     {
         this.mediaAvaliacoes = mediaAvaliacoes;
+    }
+
+    public void setDinheiroRecebido(double total)
+    {
+        this.dinheiroRecebido = this.dinheiroRecebido + total;
     }
     
     public double getDinheiroRecebido() {
@@ -33,14 +38,11 @@ public class Programador extends User
         return texto;
     }
     
-    public void obterApps()
-    {
+    public void obterApps(){
 
     }
 
-    public void inserirApps()
-    {
+    public void inserirApps(){
 
     }
-
 }
